@@ -1,21 +1,21 @@
 <?php
-// Koneksi ke DB & pilih Database
+// Koneski ke DB & Pilih Database
 $conn = mysqli_connect('localhost', 'root', '', 'pw_193040015');
 
-// Query isi table mahasiswa
+// Query isi tabel mahasiswa
 $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 
-// Ubah data ke dalam array
+// ubah data ke dalam array
 // $row = mysqli_fetch_row($result); // array numerik
-// $row = mysqli_fetch_assoc($result); // array associative
-// $row = mysqli_fetch_array($result); // array keduanya
+// $row = mysqli_fetch_assoc($result);// array associative
+// $row = mysqli_fetch_array($result);// keduanya
 $rows = [];
 while ($row = mysqli_fetch_assoc($result)) {
   $rows[] = $row;
 }
 
-// tampung ke variabel mahasiswa
-$mahasiswa = $rows;
+// Tampung ke  variabel mahasiswa
+$mahasiswa = $rows
 ?>
 
 
@@ -31,7 +31,7 @@ $mahasiswa = $rows;
 <body>
   <h3>Daftar Mahasiswa</h3>
 
-  <table border=1 cellpadding="10" cellspacing="0">
+  <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
       <th>Gambar</th>
@@ -52,7 +52,7 @@ $mahasiswa = $rows;
         <td><?= $m['email']; ?></td>
         <td><?= $m['jurusan']; ?></td>
         <td>
-          <a href="">Ubah</a> | <a href="">Hapus</a>
+          <a href="">ubah</a> | <a href="">hapus</a>
         </td>
       </tr>
     <?php endforeach; ?>

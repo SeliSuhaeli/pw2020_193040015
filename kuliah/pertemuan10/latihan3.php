@@ -1,7 +1,8 @@
 <?php
 require 'functions.php';
-
 $mahasiswa = query("SELECT * FROM mahasiswa");
+
+
 ?>
 
 
@@ -18,9 +19,9 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
   <h3>Daftar Mahasiswa</h3>
 
   <a href="tambah.php">Tambah Data Mahasiswa</a>
-  <br></br>
+  <br><br>
 
-  <table border=1 cellpadding="10" cellspacing="0">
+  <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
       <th>Gambar</th>
@@ -35,7 +36,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <td><img src="img/<?= $m['gambar']; ?>" width="60"></td>
         <td><?= $m['nama']; ?></td>
         <td>
-          <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
+          <a href="detail.php?id=<?= $m['id']; ?>">lihat detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
