@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2020 at 03:56 PM
+-- Generation Time: May 13, 2020 at 03:34 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -42,16 +42,35 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALUES
-(1, 'Seli Suhaeli Septian', '193040015', 'selisuhaeliseptian25@gmail.com', 'Teknik Informatika', 'seli.jpeg'),
-(2, 'Zahra Dwi Ameilia', '193040027', 'zahradwiameilia1@gmail.com', 'Teknik Informatika', 'zahra.jpeg'),
-(3, 'Yuni Setyawati', '193040021', 'yunisetyawati@gmail.com', 'Teknik Informatika', 'yuni.jpeg'),
-(4, 'Yanida Nur Nabila', '193040022', 'yanidanur@gmail.com', 'Teknik Informatika', 'bila.jpeg'),
-(5, 'Kareena Kardin', '193040035', 'kareenakardin@gmail.com', 'Teknik Informatika', 'Karen.jpeg'),
-(6, 'Dhiya Ulhaq Ramadhanty', '193040095', 'dhiyaulhaq@gmail.com', 'Teknik Informatika', 'dhiya.jpeg'),
-(7, 'Silvi Fitriawati', '193040028', 'silvifitriawati29@gmail.com', 'Teknik Informatika', 'Silvi.jpeg'),
-(8, 'Muhamad Rizky Fauzan', '193040014', 'rizky@gmail.com', 'Teknik Informatika', 'rizky.jpg'),
-(9, 'Fahri Arliansyah', '193040011', 'fahri@gmail.com', 'Teknik Informatika', 'fahri.jpg'),
-(10, 'M.Farhan As Siddiq', '193040010', 'farhan@gmail.com', 'Teknik Informatika', 'farhan.jpg');
+(1, 'Seli Suhaeli Septian', '193040015', 'selisuhaeliseptian25@gmail.com', 'Teknik Informatika', 'seli.png'),
+(2, 'Zahra Dwi Ameilia', '193040027', 'zahradwiameilia1@gmail.com', 'Teknik Informatika', 'zahra.png'),
+(3, 'Yuni Setyawati', '193040021', 'yunisetyawati@gmail.com', 'Teknik Informatika', 'yuni.png'),
+(4, 'Yanida Nur Nabila', '193040022', 'yanidanur@gmail.com', 'Teknik Informatika', 'bila.png'),
+(5, 'Kareena Kardin', '193040035', 'kareenakardin@gmail.com', 'Teknik Informatika', '5eba96405b352.png'),
+(6, 'Dhiya Ulhaq Ramadhanty', '193040095', 'dhiyaulhaq@gmail.com', 'Teknik Informatika', 'dhiya.png'),
+(7, 'Silvi Fitriawati', '193040028', 'silvifitriawati29@gmail.com', 'Teknik Informatika', 'sisil.png'),
+(8, 'Muhamad Rizky Fauzan', '193040014', 'rizky@gmail.com', 'Teknik Informatika', 'kijoy.png'),
+(9, 'Fahri Arliansyah', '193040011', 'fahri@gmail.com', 'Teknik Informatika', 'fahri.png'),
+(10, 'M.Farhan As Siddiq', '193040010', 'farhan@gmail.com', 'Teknik Informatika', 'farhan.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(3, 'pw', '$2y$10$5dMIqcBawRItttToUmDGIuTXxeyWMW0IPkSMUndobv8Ng4EDm18.G');
 
 --
 -- Indexes for dumped tables
@@ -64,6 +83,12 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -71,7 +96,13 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
