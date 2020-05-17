@@ -36,7 +36,7 @@ function tambah($data)
 
     $query = "INSERT INTO pakaian
                     VALUES
-                        ('', '$foto', '$nama', '$ukuran', '$warna', '$stok', '$harga')";
+                        (null, '$foto', '$nama', '$ukuran', '$warna', '$stok', '$harga')";
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
@@ -94,7 +94,7 @@ function registrasi($data)
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     // tambah user baru 
-    $query_tambah = "INSERT INTO user VALUES('', '$username', '$password')";
+    $query_tambah = "INSERT INTO user VALUES(null, '$username', '$password')";
     mysqli_query($conn, $query_tambah);
 
     return mysqli_affected_rows($conn);
