@@ -1,0 +1,89 @@
+
+/* Navbar */
+.navbar-brand {
+  font-size: 32px;
+}
+
+/* jumbotron */
+.jumbotron {
+  background-image: url(../assets/img/kom.jpg);
+  background-size: cover;
+  height: 500px;
+ 
+}
+
+.jumbotron .display-4 {
+  text-align: center;
+  margin-top: 150px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.info-panel {
+  box-shadow: 0 3px 20px rgb(0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: -100px;
+  background-color: white;
+  padding: 30px;
+}
+
+.info-panel h4 {
+  margin-top: 30px;
+}
+
+.info-panel img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* Profile */
+h3 {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 52px;
+}
+
+.col img {
+  height: 300px;
+}
+
+h2{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+p{
+  font-size: 20px;
+}
+
+/* daftar tugas */
+.row {
+  margin-top:50px;
+}
+
+/* DESKTOP VERSION*/
+@media (min-width:992px) {
+  .navbar-brand, .nav-link {
+    color: #000 !important;
+  } 
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+
+  .nav-link:hover::after {
+    content: '';
+    display: block;
+    border: 3px solid #0B65DC;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  .jumbotron {
+    margin-top: -75px;
+    height: 640;
+  }
+ }
