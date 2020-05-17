@@ -1,6 +1,7 @@
-<?php 
+<?php
 // function untuk melakukan koneksi ke database
-function koneksi() {
+function koneksi()
+{
     $conn = mysqli_connect("localhost", "root", "") or die("koneksi ke DB gagal");
     mysqli_select_db($conn, "tubes_193040015") or die("Dtabase salah!");
 
@@ -8,7 +9,8 @@ function koneksi() {
 }
 
 // function untuk melakukan query ke database
-function query($sql) {
+function query($sql)
+{
     $conn = koneksi();
     $result = mysqli_query($conn, "$sql");
 
@@ -34,7 +36,7 @@ function tambah($data)
 
     $query = "INSERT INTO pakaian
                     VALUES
-                        ('', '$foto', '$nama', '$ukuran', '$warna', '$stok', '$harga')";
+                        (null, '$foto', '$nama', '$ukuran', '$warna', '$stok', '$harga')";
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
