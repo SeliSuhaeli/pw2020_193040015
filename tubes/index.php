@@ -155,10 +155,6 @@ harga Like '%$keyword%'");
                 </div>
             </li>
             <li>
-                <img src="assets/img/2.jpg">
-                <div class="caption left-align"></div>
-            </li>
-            <li>
                 <img src="assets/img/1.jpg">
                 <div class="caption right-align"></div>
             </li>
@@ -202,7 +198,6 @@ harga Like '%$keyword%'");
         </div>
         <div class="row justify-content-center center-align">
             <div class="col-lg-6 justify-content-center">
-                <img src="assets/img/2.jpg" alt="Testimonial 1">
                 <img src="assets/img/3.jpg" alt="Testimonial 2" class="img-main">
                 <img src="assets/img/4.jpg" alt="Testimonial 3">
             </div>
